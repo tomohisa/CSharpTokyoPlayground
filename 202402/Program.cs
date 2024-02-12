@@ -36,7 +36,7 @@ while (カート.買えますか(コマンド.所持金, new OrderDetail(叉焼�
 switch (チャーハンの個数)
 {
     case 0:
-        Console.WriteLine("チャーハンが買えません。");
+        Console.WriteLine("ラーメンを購入した残り金額ではチャーハンは買えません。");
         break;
     default:
         カート = カート.注文に追加(new OrderDetail(叉焼スペシャル炒飯.Instance, new ItemAmount(チャーハンの個数))) switch
@@ -60,8 +60,8 @@ foreach (var item in 最終カート.Items)
 {
     Console.WriteLine($"{item.Item.Name} : {item.Amount.Value:N0}点");
 }
-Console.WriteLine($"合計金額は{最終カート.TotalPrice.Value:N0}円です。");
-Console.WriteLine($"受料金は{最終カート.受料金.Value:N0}円です。");
-Console.WriteLine($"売り上げは{最終カート.売り上げ.Value:N0}円です。");
-Console.WriteLine($"おつりは{最終カート.おつり.Value:N0}円です。");
+Console.WriteLine($"合計金額:{最終カート.TotalPrice.Value:N0}円");
+Console.WriteLine($"受領金  :{最終カート.受領金.Value:N0}円");
+Console.WriteLine($"売り上げ:{最終カート.売り上げ.Value:N0}円");
+Console.WriteLine($"おつり  :{最終カート.おつり.Value:N0}円");
 Console.WriteLine("ありがとうございました。");
